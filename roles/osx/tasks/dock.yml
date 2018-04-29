@@ -25,3 +25,28 @@
     value: 0
   notify:
     - killall Dock
+
+- name: Speed up mission control animations
+  osx_defaults:
+    domain: com.apple.dock
+    key: expose-animation-duration
+    type: float
+    value: 0.1
+  notify:
+    - killall Dock
+
+- name: Disable Dashboard
+  osx_defaults:
+    domain: com.apple.dashboard
+    key: mcx-disabled
+    type: bool
+    value: true
+
+- name: Disable Dashboard as a space
+  osx_defaults:
+    domain: com.apple.dock
+    key: dashboard-in-overlay
+    type: bool
+    value: true
+  notify:
+    - killall Dock
