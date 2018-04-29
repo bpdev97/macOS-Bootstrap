@@ -6,3 +6,4 @@
     owner: "{{ ansible_env.USER }}"
     group: staff
     mode: 0600
+    

@@ -4,10 +4,10 @@
 
   roles:
     - role: ssh 
-      tags: [ssh] 
+      tags: ['never', 'ssh'] 
     - role: sudoers 
-      tags: [sudoers] 
+      tags: ['sudoers'] 
     - role: osx 
-      tags: [osx]
+      tags: ['osx']
     - role: homebrew
-      tags: [homebrew]
+      tags: ['homebrew']
