@@ -1,0 +1,16 @@
+---
+- name: killall Dock
+  command: killall Dock
+  ignore_errors: yes
+
+- name: killall Finder
+  command: killall Finder
+  ignore_errors: yes
+
+- name: killall Safari
+  command: killall Safari
+  ignore_errors: yes
+
+- name: killall SystemUIServer
+  command: killall SystemUIServer
+  ignore_errors: yes

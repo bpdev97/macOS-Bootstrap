@@ -1,0 +1,14 @@
+---
+- name: Require password after waking from screensaver.
+  osx_defaults:
+    domain: com.apple.screensaver 
+    key: askForPassword
+    type: int
+    value: 1
+
+- name: Make delay immediate.
+  osx_defaults:
+    domain: com.apple.screensaver 
+    key: askForPasswordDelay
+    type: int
+    value: 0
