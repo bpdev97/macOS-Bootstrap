@@ -5,6 +5,8 @@
     key: UniversalSearchEnabled
     type: bool
     value: false
+  notify:
+  - killall Dock
 
 - name: Privacy - don’t send search queries to Apple
   osx_defaults:
@@ -12,6 +14,8 @@
     key: SuppressSearchSuggestions
     type: bool
     value: false
+  notify:
+    - killall Dock
 
 - name: Hide bookmarks bar in Safari by default
   osx_defaults:
@@ -19,6 +23,8 @@
     key: ShowFavoritesBar
     type: bool
     value: false
+  notify:
+    - killall Dock
 
 - name: Enable Safari's debugging menu
   osx_defaults:
@@ -26,6 +32,8 @@
     key: IncludeInternalDebugMenu
     type: bool
     value: true
+  notify:
+    - killall Dock
 
 - name: Enable the Develop menu and the Web Inspector in Safari
   osx_defaults:
@@ -33,18 +41,24 @@
     key: IncludeDevelopMenu
     type: bool
     value: true
+  notify:
+    - killall Dock
 
 - osx_defaults:
     domain: com.apple.Safari
     key: WebKitDeveloperExtrasEnabledPreferenceKey
     type: bool
     value: true
+  notify:
+    - killall Dock
 
 -  osx_defaults:
     domain: com.apple.Safari
     key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled
     type: bool
     value: true
+  notify:
+    - killall Dock
 
 - name: Enable "Do Not Track"
   osx_defaults:
@@ -52,3 +66,5 @@
     key: SendDoNotTrackHTTPHeader
     type: bool
     value: true
+  notify:
+    - killall Dock
