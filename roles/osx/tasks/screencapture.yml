@@ -1,0 +1,11 @@
+- name: Create screenshots directory on the desktop
+  file:
+    path: ~/Desktop/Screenshots
+    state: directory
+    
+- name: Save screenshots to the desktop
+  osx_defaults:
+    domain: com.apple.screencapture
+    key: location
+    type: string
+    value: ${HOME}/Desktop/Screenshots
