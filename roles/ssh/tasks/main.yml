@@ -1,0 +1,8 @@
+---
+- name: Copy ssh private key
+  copy:
+    dest: "{{ ansible_env.HOME }}/.ssh/id_rsa"
+    content: "{{ lookup('file', 'id_rsa') }}"
+    owner: "{{ ansible_env.USER }}"
+    group: staff
+    mode: 0600

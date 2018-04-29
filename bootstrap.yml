@@ -3,6 +3,8 @@
   connection: local
 
   roles:
+    - role: ssh 
+      tags: [ssh] 
     - role: sudoers 
       tags: [sudoers] 
     - role: osx 
