@@ -1,0 +1,16 @@
+---
+- name: Tap taps
+  homebrew_tap:
+    name: "{{ brew_taps }}"
+    state: present
+    
+- name: Install/Upgrade packages
+  homebrew:
+    name: "{{ brew_packages }}"
+    state: latest
+    update_homebrew: yes
+
+- name: Install/Upgrade casks
+  homebrew_cask:
+    name: "{{ brew_casks }}"
+    state: latest

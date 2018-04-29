@@ -3,7 +3,9 @@
   connection: local
 
   roles:
+    - role: sudoers 
+      tags: [sudoers] 
     - role: osx 
       tags: [osx]
-    - role: common 
-      tags: [common] 
+    - role: homebrew
+      tags: [homebrew]
