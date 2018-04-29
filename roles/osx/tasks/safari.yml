@@ -57,7 +57,7 @@
     key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled
     type: bool
     value: true
-  notify:
+   notify:
     - killall Dock
 
 - name: Enable "Do Not Track"

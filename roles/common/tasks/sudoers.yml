@@ -1,0 +1,9 @@
+---
+- name: Setup passwordless sudo for the admin group
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%admin\s'
+    line: '%admin ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+  become: yes
