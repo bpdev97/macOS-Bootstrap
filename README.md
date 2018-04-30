@@ -16,7 +16,11 @@ $ ./init.sh
 ```
 $ ansible-playbook bootstrap.yml --tags "ssh" --ask-vault-pass
 ```
-* Run playbook normally
+* Add my private key to my keychain
+```
+$ ssh-add -K ~/.ssh/id_rsa
+```
+* Run the playbook normally
 ```
 $ ansible-playbook bootstrap.yml
 ```
