@@ -1,0 +1,26 @@
+---
+- name: Install homeshick
+  homebrew:
+    name: homeshick
+    state: present
+
+- name: Clone dotfiles
+  git:  
+    repo: git@github.com:bpdev97/dotfiles.git
+    dest: "{{ansible_env.HOME}}/.homesick/repos/dotfiles"
+    accept_hostkey: yes
+
+- name: Link dotfiles
+  command: homeshick link dotfiles -f -q
+
+- name: Clone oh-my-zsh
+  git:  
+    repo: git@github.com:robbyrussell/oh-my-zsh
+    dest: "{{ansible_env.HOME}}/.homesick/repos/oh-my-zsh"
+    accept_hostkey: yes
+    
+- name: Symlink oh-my-zsh
+  file:
+    src: "{{ ansible_env.HOME }}/.homesick/repos/oh-my-zsh"
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh"
+    state: link
