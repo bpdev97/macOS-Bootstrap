@@ -39,6 +39,7 @@ brew_packages:
 
 brew_casks:
   - alfred
+  - rocket
   - firefox
   - numi
   - transmission
