@@ -1,6 +1,4 @@
 brew_taps:
-  - caskroom/cask
-  - caskroom/drivers
   - homebrew/core
   - homebrew/services
   - linux-noah/noah
@@ -18,8 +16,11 @@ brew_packages:
   - openssl
   - speedtest-cli
   - gdb
+  - gnu-sed
+  - gnu-tar
   - sqlite
   - packer
+  - terraform
   - sshfs
   - git
   - terminal-notifier
@@ -38,6 +39,9 @@ brew_packages:
   - python@2
 
 brew_casks:
+  - mysql-workbench
+  - postman
+  - pycharm
   - alfred
   - rocket
   - firefox
